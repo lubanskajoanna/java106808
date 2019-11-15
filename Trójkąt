@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Trojkat {
+  public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        System.out.println("PODAJ BOKI TROJKATA");
+        double BokA = scan.nextDouble();
+        double BokB = scan.nextDouble();
+        double BokC = scan.nextDouble();
+
+        if(BokA<BokB+BokC||BokB<BokA+BokC||BokC<BokA+BokB){
+			System.out.println("Z PODANYCH BOKOW MOZNA STWORZYC TROJKAT");
+    }
+    else
+      System.out.Println("Z PODANYCH BOKOW NIE MOZNA STWORZYC TROJKATA");
+
+      //OBLICZENIE POLA TROJKATA 
+      double pole;
+      double X;
+      X = 0.5*(BokA+BokB+BokC);
+	    double wzor= X*(X-BokA)*(X-BokB)*(X-BokC);
+	    pole = Math.sqrt(wzor);
+      System.out.println("POLE TROJKATA WYNOSI = " + pole);
+
+      //SPRAWDZENIE CZY TROJKAT JEST ROZWARTOKATNY
+      if(Math.pow(BokA,2) + Math.pow(BokB,2) < Math.pow(BokC,2)||Math.pow(BokB,2) + Math.pow(BokC,2) < Math.pow(BokA,2)|| Math.pow(BokA,2) + Math.pow(BokC,2) < Math.pow(bokB,2)){
+				System.out.println("TO JEST TROJKAT ROZWARTOKATNY");
+			}
+			else
+				System.out.println("TO NIE JEST TROJKAT ROZWARTOKATNY");
+        
+      //SPRAWDZENIE CZY TROJKAT JEST PROSTOKATNY
+      
+      if(Math.pow(BokA,2) + Math.pow(BokB,2) == Math.pow(BokC,2)||Math.pow(BokB,2) + Math.pow(BokC,2) == Math.pow(BokA,2)|| Math.pow(BokA,2) + Math.pow(BokC,2) == Math.pow(bokB,2)){
+				System.out.println("TROJKAT JEST PROSTOKATNY");
+			}
+			else
+				System.out.println("TROJKAT NIE JEST PROSTOKATNY");
+
+      //SORTOWANIE
+      double[] tablica = {BokA, BokB, BokC};
+      System.out.println("OTO TABLICA PRZED POSORTOWANIEM "+ Arrays.ToString(tablica));
+      double m;
+      double t;
+      for(double i = 0; i<tablica.lenght; i++){
+        for(double j-i; j<tablica.length; j++){
+          if tablica[j] <tablica[m]{
+            m = j;
+          }
+         }
+        t = tab[i];
+        tablica[i]=tablica[m];
+        tablica[m]=t;       
+        }
+        System.out.println("OTO POSORTOWANA TABLICA: " + Arrays.toString(tablica));
+    }
+    }
