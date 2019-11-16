@@ -1,7 +1,7 @@
 public interface Person
 {
-    String imie;
-	  String nazwisko;
-	  String wyksztalcenie;
+    	String imie;
+	String nazwisko;
+	String wyksztalcenie;
   	int wiek;
 }
