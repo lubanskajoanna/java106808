@@ -1,0 +1,73 @@
+import java.io.File;	
+import java.util.Arrays;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+	
+	public class Quiz {
+	
+		public static void main(String[] args) throws FileNotFoundException {
+	
+			int zdobytePunkty = 0;
+	
+			File file = new File("pytania.txt"); // adres do pliku z pytaniami
+			Scanner scan = new Scanner(System.in);
+			Scanner scanner = new Scanner(file);
+	
+			int licznikPytan = 1;
+	
+			while (scanner.hasNext()){
+				System.out.println("Pytanie numer:" + licznikPytan);
+				String pytanie = scanner.nextLine();
+				System.out.println(pytanie);
+	
+				String a = scanner.nextLine();
+				System.out.print("a) ");
+				System.out.println(a);
+	
+				String b = scanner.nextLine();
+				System.out.print("b) ");
+				System.out.println(b);
+	
+				String c = scanner.nextLine();
+				System.out.print("c) ");
+				System.out.println(c);
+	
+				String d = scanner.nextLine();
+				System.out.print("d) ");
+				System.out.println(d);
+	
+				String poprawnaOdpowiedz = scanner.nextLine();
+				System.out.println("* Twoja odpowiedz: ");
+				String odp = scan.nextLine();
+	
+				if (odp.equals(poprawnaOdpowiedz)){
+					System.out.println("To jest poprawna odpowiedz. +1 punkt\n");
+					zdobytePunkty++;
+				}
+				else{
+					System.out.println("Podana odpowiedz jest bledna. Prawidłowa odpowiedż to " + poprawnaOdpowiedz + "\n  Nie otrzymujesz punktu");
+				}
+				licznikPytan++;
+			}
+			
+			licznikPytan --;
+			double procent = (double)zdobytePunkty / licznikPytan * 100;
+	
+			System.out.println("QUIZ zakonczony. Zdobyto:" + zdobytePunkty + " punkty(ów). Daje to " + procent + "%.");
+			if (procent == 100){
+				System.out.println("Arcymistrz! Uzyskano maksymalna liczbe punktow");
+			}
+			else if (procent >= 85){
+				System.out.println("Jesteś super w tej dziedzinie!");
+			}
+			else if (procent > 50){
+				System.out.println("Uzyskano ponad polowe mozliwych punktow");
+			}
+			else if (procent == 0){
+				System.out.println("Ohh, wypadlo fatalnie, musisz wiecej pocwiczyc");
+			}
+			else{
+				System.out.println("Następnym razem wypadniesz lepiej");
+			}
+		}
+}
