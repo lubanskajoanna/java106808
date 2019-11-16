@@ -1,35 +1,51 @@
-public abstract class Samochod {
+public class ZadanieCar {
 	
-	private String marka;
-	private String kolor;
-	private int maxPredkosc;
+	public static void main(String[] args)
+	{
+		
+		public abstract class Samochod {
 	
-	public abstract void gas();
-	
-	public abstract void hamuj();
-	
-	public void setMarka(String marka) {
-	       this.marka = marka;
-	   }
-	
-	public void setKolor(String kolor) {
-	       this.kolor = kolor;
-	   }
+		private String marka;
+		private String kolor;
+		private int maxPredkosc;
 
-	   public void setMaxPredkosc(int maxPredkosc) {
-	       this.maxPredkosc = maxPredkosc;
-	   }
+		public abstract void gas();
+
+		public abstract void hamuj();
+
+		public void setMarka(String marka) {
+		       this.marka = marka;
+		}
+
+		public void setKolor(String kolor) {
+		       this.kolor = kolor;
+		}
+
+		public void setMaxPredkosc(int maxPredkosc) {
+		       this.maxPredkosc = maxPredkosc;
+		}
 
 }
 
-public abstract class Mercedes extends Samochod {
+		public abstract class Mercedes extends Samochod {
+
+			private int rocznik;
+
+			public abstract void radio();
+
+			public void setRocznik(int rocznik) {
+			       this.rocznik = rocznik;
+	   	}
 	
-	private int rokWydania;
-	
-	public abstract void radio();
-	
-	public void setRokWydania(int rokWydania) {
-	       this.rokWydania = rokWydania;
-	   }
+}
+
+		
+		Samochod pierwszy = new Samochod();
+		pierwszy.marka = "Skoda";
+		pierwszy.kolor = "fuksja";
+		pierwszy.maxPredkosc = 100000;
+		pierwszy.rocznik = 2015;
+
+	}
 	
 }
