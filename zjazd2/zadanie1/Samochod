@@ -1,0 +1,35 @@
+public abstract class Samochod {
+	
+	private String marka;
+	private String kolor;
+	private int maxPredkosc;
+	
+	public abstract void gas();
+	
+	public abstract void hamuj();
+	
+	public void setMarka(String marka) {
+	       this.marka = marka;
+	   }
+	
+	public void setKolor(String kolor) {
+	       this.kolor = kolor;
+	   }
+
+	   public void setMaxPredkosc(int maxPredkosc) {
+	       this.maxPredkosc = maxPredkosc;
+	   }
+
+}
+
+public abstract class Mercedes extends Samochod {
+	
+	private int rokWydania;
+	
+	public abstract void radio();
+	
+	public void setRokWydania(int rokWydania) {
+	       this.rokWydania = rokWydania;
+	   }
+	
+}
