@@ -9,7 +9,7 @@ public class Zadanie
 		}
     
 		Square pierwsza = new Square();
-    pierwsza.resetAllAttributes();
+    		pierwsza.resetAllAttributes();
 		pierwsza.printSidesNumber();
 	}
 }
