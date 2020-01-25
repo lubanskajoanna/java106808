@@ -127,5 +127,4 @@ public class HelperStaticMethods {
         }
         return Integer.parseInt(result);
     }
-
 }
