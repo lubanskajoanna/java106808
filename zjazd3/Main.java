@@ -9,7 +9,6 @@ public class Box<T> {
         return item;
     }
     
-
 public class Main {
   
   public void contains()
