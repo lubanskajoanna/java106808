@@ -1,5 +1,4 @@
 package Kalkulator;
-
 import java.util.List;
 import static Kalkulator.HelperStaticMethods.*;
 
